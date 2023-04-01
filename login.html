@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/IndexStyle.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="logo">
+        <img src="img/uebosOriginal.png" alt="logo" ; style="width: 200px;">
+    </div>
+
+    <div class="overlay">
+        <form>
+            <div class="con">
+                <header class="head-form">
+                    <h2>Login</h2>
+                    <p>Inicie sesión con su usuario y contraseña</p>
+                </header>
+
+                <br>
+                <div class="field-set">
+
+                    <span class="input-item">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <input class="form-input" id="txt-input" type="text" placeholder="Usuario" required>
+                    <br>
+
+                    <span class="input-item">
+                        <i class="fa-solid fa-lock"></i>
+                    </span>
+                    <input class="form-input" type="password" placeholder="Contraseña" id="pwd" name="password"
+                        required>
+
+                    <span>
+                        <i class="fa fa-eye" aria-hidden="true" type="button" id="eye"></i>
+                    </span>
+
+                    <br>
+
+                    <button onclick="location.href='C:/Users/Saul Hernandez/Desktop/Universidad/Ambiente Web Cliente_Servidor/projecto final/index.html'"
+                    class="log-in"> Login </button>
+                </div>
+
+                <div class="other">
+                    <button class="btn submits frgt-pass">¿Olvidó su contraseña?</button>
+
+                    <button
+                        onclick="location.href='C:/Users/Saul Hernandez/Desktop/Universidad/Ambiente Web Cliente_Servidor/projecto final/registro.html'"
+                        class="btn submits sign-up">Registrarse
+
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        function show() {
+            var p = document.getElementById('pwd');
+            p.setAttribute('type', 'text');
+        }
+
+        function hide() {
+            var p = document.getElementById('pwd');
+            p.setAttribute('type', 'password');
+        }
+
+        var pwShown = 0;
+
+        document.getElementById("eye").addEventListener("click", function () {
+            if (pwShown == 0) {
+                pwShown = 1;
+                show();
+            } else {
+                pwShown = 0;
+                hide();
+            }
+        }, false);
+    </script>
+
+</body>
+
+
+</html>
